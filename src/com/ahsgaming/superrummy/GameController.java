@@ -22,13 +22,8 @@
  */
 package com.ahsgaming.superrummy;
 
-import com.ahsgaming.superrummy.cards.Card;
-import com.ahsgaming.superrummy.cards.Suits;
-import com.ahsgaming.superrummy.cards.Values;
-import com.badlogic.gdx.scenes.scene2d.Group;
+import com.ahsgaming.superrummy.cards.*;
 import com.badlogic.gdx.utils.Array;
-
-import java.util.Random;
 
 /**
  * @author jami
@@ -37,19 +32,55 @@ import java.util.Random;
 public class GameController {
 	public String LOG = "GameController";
 
-    Array<Card> deck;
+    static final int[][] roundDef = {
+            {2, 0},         // 6 = 2 books
+            {1, 1},         // 7 = 1 book, 1 run
+            {0, 2},         // 8 = 2 runs
+            {3, 0},         // 9 = 3 books
+            {2, 1},         // 10 = 2 books, 1 run
+            {1, 2},         // 11 = 1 book, 2 runs
+            {0, 3}          // 12 = 3 runs
+    };
+
+    int currentRound = 0;
+
+    CardCollection deck;
+    CardCollection discards;
+
+    Array<Meld> melds;
+
+    Array<Player> players;
 
 	/**
 	 * Constructors
 	 */
 	
-	public GameController() {
-        deck = shuffle();
+	public GameController(Array<Player> players) {
+        deck = new CardCollection(null);
+
+        this.players = players;
 	}
-	
+
 	/**
 	 * Methods
 	 */
+
+    public void startRound(int round) {
+        currentRound = round;
+        deck.clear();
+
+        deck.addAll(shuffle());
+
+        for (Player p: players) {
+            p.getHand().clear();
+        }
+
+        for (int i = 0; i < (currentRound <= 4 ? 10 : 12); i++) {
+            for (Player p: players) {
+                p.getHand().addCard(deck.pop());
+            }
+        }
+    }
 
     public Array<Card> shuffle() {
         // two decks!
@@ -74,7 +105,7 @@ public class GameController {
         return shuffled;
     }
 
-    public Array<Card> getDeck() {
+    public CardCollection getDeck() {
         return deck;
     }
 }

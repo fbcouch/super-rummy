@@ -21,6 +21,7 @@ public class Card extends Group {
     RummyGame game;
 
     public Card(Values value, Suits suit) {
+        super();
         this.value = value;
         this.suit = suit;
         this.game = RummyGame.instance;

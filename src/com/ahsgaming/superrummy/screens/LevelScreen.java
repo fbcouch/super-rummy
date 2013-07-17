@@ -23,10 +23,9 @@
 package com.ahsgaming.superrummy.screens;
 
 import com.ahsgaming.superrummy.GameController;
+import com.ahsgaming.superrummy.Player;
 import com.ahsgaming.superrummy.RummyGame;
 import com.ahsgaming.superrummy.cards.Card;
-import com.ahsgaming.superrummy.cards.Suits;
-import com.ahsgaming.superrummy.cards.Values;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.scenes.scene2d.Group;
@@ -42,19 +41,22 @@ import com.badlogic.gdx.scenes.scene2d.ui.Label.LabelStyle;
 public class LevelScreen extends AbstractScreen {
 	public String LOG = "LevelScreen";
 
-    protected static LevelScreen instance;
+    static LevelScreen instance;
 
-	private Group grpLevel;
+	Group grpLevel;
 	
-	private GameController gController = null;
+	GameController gameController = null;
+
+    Player currentPlayer;
 	
 	/**
 	 * @param game
 	 */
-	public LevelScreen(RummyGame game, GameController gController) {
+	public LevelScreen(RummyGame game, GameController gameController, Player currentPlayer) {
 	    super(game);
 	    instance = this;
-        this.gController = gController;
+        this.gameController = gameController;
+        this.currentPlayer = currentPlayer;
 	}
 	
 	/**
@@ -71,10 +73,11 @@ public class LevelScreen extends AbstractScreen {
 		Gdx.app.log(RummyGame.LOG, "LevelScreen#show");
         grpLevel = new Group();
 
-        for (int x = 0; x < 12; x ++) {
-            Card drawn = gController.getDeck().pop();
-            grpLevel.addActor(drawn);
-            drawn.setX(drawn.getWidth() * 0.5f * x);
+        int x = 0;
+        for (Card c: currentPlayer.getHand().getCards()) {
+            grpLevel.addActor(c);
+            c.setX(x);
+            x += c.getWidth() * 0.75f;
         }
 	}
 	

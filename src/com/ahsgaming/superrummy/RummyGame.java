@@ -6,6 +6,7 @@ import com.badlogic.gdx.Game;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
 import com.badlogic.gdx.graphics.FPSLogger;
+import com.badlogic.gdx.utils.Array;
 
 public class RummyGame extends Game {
 	public static final boolean DEBUG = true;
@@ -19,6 +20,7 @@ public class RummyGame extends Game {
     public static TextureService textureService;
 
     public GameController gameController;
+    Player currentPlayer;
 
     public RummyGame() {
         instance = this;
@@ -28,8 +30,14 @@ public class RummyGame extends Game {
     public void create() {
         textureService = new TextureService("assets.atlas");
 
-        gameController = new GameController();
-        if (DEBUG) setScreen(new LevelScreen(this, gameController));
+        Array<Player> players = new Array<Player>();
+        currentPlayer = new Player(Utils.getRandomId(), "Jami");
+        players.add(currentPlayer);
+        players.add(new Player(Utils.getRandomId(), "Player"));
+
+        gameController = new GameController(players);
+        gameController.startRound(0);
+        if (DEBUG) setScreen(new LevelScreen(this, gameController, currentPlayer));
     }
 
     @Override
