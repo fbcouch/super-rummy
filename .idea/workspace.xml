@@ -7,10 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="158f7e3e-4279-4ad7-b3f4-7deb523413fc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ahsgaming/superrummy/cards/CardCollection.java" afterPath="$PROJECT_DIR$/src/com/ahsgaming/superrummy/cards/CardCollection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ahsgaming/superrummy/GameController.java" afterPath="$PROJECT_DIR$/src/com/ahsgaming/superrummy/GameController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ahsgaming/superrummy/screens/LevelScreen.java" afterPath="$PROJECT_DIR$/src/com/ahsgaming/superrummy/screens/LevelScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ahsgaming/superrummy/RummyGame.java" afterPath="$PROJECT_DIR$/src/com/ahsgaming/superrummy/RummyGame.java" />
     </list>
     <ignored path="valley-of-bones.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,7 +20,7 @@
     <file path="/NetController.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1367104835122" ignored="false" />
     <file path="/GameController.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1374175879109" ignored="false" />
     <file path="/EndTurn.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1367090717362" ignored="false" />
-    <file path="/LevelScreen.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1374176980386" ignored="false" />
+    <file path="/LevelScreen.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1374177278638" ignored="false" />
     <file path="/MainMenuScreen.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1367096167407" ignored="false" />
     <file path="/AbstractScreen.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1374024074647" ignored="false" />
     <file path="/GameSetupScreen.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1368232618295" ignored="false" />
@@ -156,7 +153,7 @@
       <file leaf-file-name="LevelScreen.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/ahsgaming/superrummy/screens/LevelScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="144" selection-start="2914" selection-end="3038" vertical-scroll-proportion="0.5232143">
+            <state line="103" column="9" selection-start="3041" selection-end="3041" vertical-scroll-proportion="0.69464284">
               <folding />
             </state>
           </provider>
@@ -791,7 +788,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ahsgaming/superrummy/screens/LevelScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="144" selection-start="2914" selection-end="3038" vertical-scroll-proportion="0.5232143">
+        <state line="103" column="9" selection-start="3041" selection-end="3041" vertical-scroll-proportion="0.69464284">
           <folding />
         </state>
       </provider>

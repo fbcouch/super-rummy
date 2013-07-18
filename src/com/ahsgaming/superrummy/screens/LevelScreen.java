@@ -98,11 +98,10 @@ public class LevelScreen extends AbstractScreen {
         for (int i = 0; i < gameController.getPlayers().size; i++) {
             Player p = gameController.getPlayers().get((i + offset) % gameController.getPlayers().size);
             p.getHand().setPosition(
-                    i % 2 == 0 ? (stage.getWidth() - p.getHand().getWidth()) * 0.5f : i == 1 ? 0 : stage.getWidth() - p.getHand().getWidth(),
-                    i % 2 == 0 ? i == 0 ? 0 : stage.getHeight() - p.getHand().getHeight() : (stage.getHeight() - p.getHand().getHeight()) * 0.5f
+                    i == 0 ? (stage.getWidth() - p.getHand().getWidth()) * 0.5f : ((i - 0.5f) * stage.getWidth() / (gameController.getPlayers().size - 1)) - p.getHand().getWidth() * 0.5f,
+                    i == 0 ? 0 : stage.getHeight() - p.getHand().getHeight()
             );
         }
-        //currentPlayer.getHand().setPosition((stage.getWidth() - currentPlayer.getHand().getWidth()) * 0.5f, 0);
 	}
 	
 	public void addFloatingLabel(String text, float x, float y) {
