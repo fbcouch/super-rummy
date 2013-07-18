@@ -34,6 +34,8 @@ public class RummyGame extends Game {
         currentPlayer = new Player(Utils.getRandomId(), "Jami");
         players.add(currentPlayer);
         players.add(new Player(Utils.getRandomId(), "Player"));
+        players.add(new Player(Utils.getRandomId(), "Player"));
+        players.add(new Player(Utils.getRandomId(), "Player"));
 
         gameController = new GameController(players);
         gameController.startRound(0);

@@ -73,8 +73,13 @@ public class LevelScreen extends AbstractScreen {
 		Gdx.app.log(RummyGame.LOG, "LevelScreen#show");
         grpLevel = new Group();
 
-        grpLevel.addActor(currentPlayer.getHand());
-
+        for (Player p: gameController.getPlayers()) {
+            grpLevel.addActor(p.getHand());
+            p.getHand().setHidden(true);
+            p.getHand().setCompressed(true);
+        }
+        currentPlayer.getHand().setHidden(false);
+        currentPlayer.getHand().setCompressed(false);
 	}
 	
 	@Override
@@ -89,8 +94,15 @@ public class LevelScreen extends AbstractScreen {
 	public void render(float delta) {
 		super.render(delta);
 
-
-        currentPlayer.getHand().setPosition((stage.getWidth() - currentPlayer.getHand().getWidth()) * 0.5f, 0);
+        int offset = gameController.getPlayers().indexOf(currentPlayer, true);
+        for (int i = 0; i < gameController.getPlayers().size; i++) {
+            Player p = gameController.getPlayers().get((i + offset) % gameController.getPlayers().size);
+            p.getHand().setPosition(
+                    i % 2 == 0 ? (stage.getWidth() - p.getHand().getWidth()) * 0.5f : i == 1 ? 0 : stage.getWidth() - p.getHand().getWidth(),
+                    i % 2 == 0 ? i == 0 ? 0 : stage.getHeight() - p.getHand().getHeight() : (stage.getHeight() - p.getHand().getHeight()) * 0.5f
+            );
+        }
+        //currentPlayer.getHand().setPosition((stage.getWidth() - currentPlayer.getHand().getWidth()) * 0.5f, 0);
 	}
 	
 	public void addFloatingLabel(String text, float x, float y) {

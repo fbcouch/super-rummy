@@ -108,4 +108,8 @@ public class GameController {
     public CardCollection getDeck() {
         return deck;
     }
+
+    public Array<Player> getPlayers() {
+        return players;
+    }
 }

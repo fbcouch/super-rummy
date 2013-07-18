@@ -101,4 +101,30 @@ public class CardCollection extends Group {
     public Array<Card> getCards() {
         return cards;
     }
+
+    public boolean isDirty() {
+        return dirty;
+    }
+
+    public void setDirty(boolean dirty) {
+        this.dirty = dirty;
+    }
+
+    public boolean isCompressed() {
+        return compressed;
+    }
+
+    public void setCompressed(boolean compressed) {
+        dirty = true;
+        this.compressed = compressed;
+    }
+
+    public boolean isHidden() {
+        return hidden;
+    }
+
+    public void setHidden(boolean hidden) {
+        dirty = true;
+        this.hidden = hidden;
+    }
 }
