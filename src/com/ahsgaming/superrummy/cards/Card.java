@@ -2,7 +2,9 @@ package com.ahsgaming.superrummy.cards;
 
 import com.ahsgaming.superrummy.RummyGame;
 import com.badlogic.gdx.scenes.scene2d.Group;
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
+import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 
 /**
  * valley-of-bones
@@ -16,18 +18,48 @@ public class Card extends Group {
     Values value;
     Suits suit;
 
-    Image image;
+    Image frontImage, backImage;
 
     RummyGame game;
+
+    boolean selected = false;
+    boolean faceDown = false;
+    boolean dirty = true;
 
     public Card(Values value, Suits suit) {
         super();
         this.value = value;
         this.suit = suit;
         this.game = RummyGame.instance;
-        this.image = new Image(game.textureService.createSprite(getCardString() + "_"));
-        this.addActor(this.image);
-        this.setSize(this.image.getWidth(), this.image.getHeight());
+        this.frontImage = new Image(game.textureService.createSprite(getCardString() + "_"));
+        this.backImage = new Image(game.textureService.createSprite("back"));
+        this.addActor(this.frontImage);
+        this.setSize(this.frontImage.getWidth(), this.frontImage.getHeight());
+
+        this.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                super.clicked(event, x, y);
+
+                toggleSelected();
+
+            }
+        });
+    }
+
+    @Override
+    public void act(float delta) {
+        super.act(delta);
+        if (dirty) {
+            if (faceDown) {
+                frontImage.remove();
+                this.addActorAt(0, backImage);
+            } else {
+                backImage.remove();
+                this.addActorAt(0, frontImage);
+            }
+        }
+        dirty = false;
     }
 
     public String getCardString() {                  // TODO handle NONE values (face down card)
@@ -52,5 +84,28 @@ public class Card extends Group {
                 returnVal += value.ordinal();
         }
         return returnVal;
+    }
+
+    public boolean isSelected() {
+        return selected;
+    }
+
+    public void setSelected(boolean selected) {
+        dirty = true;
+        this.selected = selected;
+    }
+
+    public void toggleSelected() {
+        dirty = true;
+        this.selected = !selected;
+    }
+
+    public boolean isFaceDown() {
+        return faceDown;
+    }
+
+    public void setFaceDown(boolean faceDown) {
+        dirty = true;
+        this.faceDown = faceDown;
     }
 }

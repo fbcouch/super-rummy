@@ -73,12 +73,8 @@ public class LevelScreen extends AbstractScreen {
 		Gdx.app.log(RummyGame.LOG, "LevelScreen#show");
         grpLevel = new Group();
 
-        int x = 0;
-        for (Card c: currentPlayer.getHand().getCards()) {
-            grpLevel.addActor(c);
-            c.setX(x);
-            x += c.getWidth() * 0.75f;
-        }
+        grpLevel.addActor(currentPlayer.getHand());
+
 	}
 	
 	@Override
@@ -87,7 +83,6 @@ public class LevelScreen extends AbstractScreen {
 		
 		stage.addActor(grpLevel);
 
-
 	}
 
 	@Override
@@ -95,7 +90,7 @@ public class LevelScreen extends AbstractScreen {
 		super.render(delta);
 
 
-
+        currentPlayer.getHand().setPosition((stage.getWidth() - currentPlayer.getHand().getWidth()) * 0.5f, 0);
 	}
 	
 	public void addFloatingLabel(String text, float x, float y) {
