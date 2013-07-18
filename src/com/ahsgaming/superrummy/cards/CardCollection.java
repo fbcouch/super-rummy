@@ -40,11 +40,12 @@ public class CardCollection extends Group {
 
             int x = 0;
             for (Card c: cards) {
+                c.setFaceDown(hidden);
                 c.setPosition(x, (c.isSelected() ? c.getHeight() * 0.25f : 0));
-                x += c.getWidth() * 0.75f;
+                x += c.getWidth() * (compressed ? 0.25f : 0.75f);
             }
 
-            setSize(x + cards.get(0).getWidth() * 0.25f, cards.get(0).getHeight());
+            setSize(x + cards.get(0).getWidth() * (compressed ? 0.75f : 0.25f), cards.get(0).getHeight());
         }
         dirty = false;
     }

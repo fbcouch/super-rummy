@@ -8,16 +8,69 @@
   <component name="ChangeListManager">
     <list default="true" id="158f7e3e-4279-4ad7-b3f4-7deb523413fc" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/assets.png" afterPath="$PROJECT_DIR$/assets/assets.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/assets.tps" afterPath="$PROJECT_DIR$/art/assets.tps" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ahsgaming/superrummy/cards/Card.java" afterPath="$PROJECT_DIR$/src/com/ahsgaming/superrummy/cards/Card.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/back.png" afterPath="$PROJECT_DIR$/art/cards/back.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/clubs_10_.png" afterPath="$PROJECT_DIR$/art/cards/clubs_10_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/clubs_2_.png" afterPath="$PROJECT_DIR$/art/cards/clubs_2_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/clubs_3_.png" afterPath="$PROJECT_DIR$/art/cards/clubs_3_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/clubs_4_.png" afterPath="$PROJECT_DIR$/art/cards/clubs_4_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/clubs_5_.png" afterPath="$PROJECT_DIR$/art/cards/clubs_5_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/clubs_6_.png" afterPath="$PROJECT_DIR$/art/cards/clubs_6_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/clubs_7_.png" afterPath="$PROJECT_DIR$/art/cards/clubs_7_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/clubs_8_.png" afterPath="$PROJECT_DIR$/art/cards/clubs_8_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/clubs_9_.png" afterPath="$PROJECT_DIR$/art/cards/clubs_9_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/clubs_A_.png" afterPath="$PROJECT_DIR$/art/cards/clubs_A_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/clubs_J_.png" afterPath="$PROJECT_DIR$/art/cards/clubs_J_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/clubs_K_.png" afterPath="$PROJECT_DIR$/art/cards/clubs_K_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/clubs_Q_.png" afterPath="$PROJECT_DIR$/art/cards/clubs_Q_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/diamonds_10_.png" afterPath="$PROJECT_DIR$/art/cards/diamonds_10_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/diamonds_2_.png" afterPath="$PROJECT_DIR$/art/cards/diamonds_2_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/diamonds_3_.png" afterPath="$PROJECT_DIR$/art/cards/diamonds_3_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/diamonds_4_.png" afterPath="$PROJECT_DIR$/art/cards/diamonds_4_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/diamonds_5_.png" afterPath="$PROJECT_DIR$/art/cards/diamonds_5_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/diamonds_6_.png" afterPath="$PROJECT_DIR$/art/cards/diamonds_6_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/diamonds_7_.png" afterPath="$PROJECT_DIR$/art/cards/diamonds_7_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/diamonds_8_.png" afterPath="$PROJECT_DIR$/art/cards/diamonds_8_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/diamonds_9_.png" afterPath="$PROJECT_DIR$/art/cards/diamonds_9_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/diamonds_A_.png" afterPath="$PROJECT_DIR$/art/cards/diamonds_A_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/diamonds_J_.png" afterPath="$PROJECT_DIR$/art/cards/diamonds_J_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/diamonds_K_.png" afterPath="$PROJECT_DIR$/art/cards/diamonds_K_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/diamonds_Q_.png" afterPath="$PROJECT_DIR$/art/cards/diamonds_Q_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/hearts_10_.png" afterPath="$PROJECT_DIR$/art/cards/hearts_10_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/hearts_2_.png" afterPath="$PROJECT_DIR$/art/cards/hearts_2_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/hearts_3_.png" afterPath="$PROJECT_DIR$/art/cards/hearts_3_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/hearts_4_.png" afterPath="$PROJECT_DIR$/art/cards/hearts_4_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/hearts_5_.png" afterPath="$PROJECT_DIR$/art/cards/hearts_5_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/hearts_6_.png" afterPath="$PROJECT_DIR$/art/cards/hearts_6_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/hearts_7_.png" afterPath="$PROJECT_DIR$/art/cards/hearts_7_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/hearts_8_.png" afterPath="$PROJECT_DIR$/art/cards/hearts_8_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/hearts_9_.png" afterPath="$PROJECT_DIR$/art/cards/hearts_9_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/hearts_A_.png" afterPath="$PROJECT_DIR$/art/cards/hearts_A_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/hearts_J_.png" afterPath="$PROJECT_DIR$/art/cards/hearts_J_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/hearts_K_.png" afterPath="$PROJECT_DIR$/art/cards/hearts_K_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/hearts_Q_.png" afterPath="$PROJECT_DIR$/art/cards/hearts_Q_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/joker_.png" afterPath="$PROJECT_DIR$/art/cards/joker_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/spades_10_.png" afterPath="$PROJECT_DIR$/art/cards/spades_10_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/spades_2_.png" afterPath="$PROJECT_DIR$/art/cards/spades_2_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/spades_3_.png" afterPath="$PROJECT_DIR$/art/cards/spades_3_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/spades_4_.png" afterPath="$PROJECT_DIR$/art/cards/spades_4_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/spades_5_.png" afterPath="$PROJECT_DIR$/art/cards/spades_5_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/spades_6_.png" afterPath="$PROJECT_DIR$/art/cards/spades_6_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/spades_7_.png" afterPath="$PROJECT_DIR$/art/cards/spades_7_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/spades_8_.png" afterPath="$PROJECT_DIR$/art/cards/spades_8_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/spades_9_.png" afterPath="$PROJECT_DIR$/art/cards/spades_9_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/spades_A_.png" afterPath="$PROJECT_DIR$/art/cards/spades_A_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/spades_J_.png" afterPath="$PROJECT_DIR$/art/cards/spades_J_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/spades_K_.png" afterPath="$PROJECT_DIR$/art/cards/spades_K_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/cards/spades_Q_.png" afterPath="$PROJECT_DIR$/art/cards/spades_Q_.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ahsgaming/superrummy/cards/CardCollection.java" afterPath="$PROJECT_DIR$/src/com/ahsgaming/superrummy/cards/CardCollection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ahsgaming/superrummy/screens/LevelScreen.java" afterPath="$PROJECT_DIR$/src/com/ahsgaming/superrummy/screens/LevelScreen.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/assets.atlas" afterPath="$PROJECT_DIR$/assets/assets.atlas" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/momoko_Deck_of_52_Stylized_Playing_Cards.svg" afterPath="$PROJECT_DIR$/art/momoko_Deck_of_52_Stylized_Playing_Cards.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="valley-of-bones.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1374106783504" ignored="false" />
+    <file path="/Dummy.txt" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1374161753851" ignored="false" />
     <file path="/fragment.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1374026042993" ignored="false" />
     <file path="/KryoCommon.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1369368067837" ignored="false" />
     <file path="/GameClient.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1367105013238" ignored="false" />
@@ -68,7 +121,7 @@
     <file path="/Values.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1374029687423" ignored="false" />
     <file path="/Card.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1374110170396" ignored="false" />
     <file path="/TextureService.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1374031271119" ignored="false" />
-    <file path="/CardCollection.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1374110125427" ignored="false" />
+    <file path="/CardCollection.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1374164064052" ignored="false" />
     <file path="/Meld.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1374099310073" ignored="false" />
     <file path="/Book.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1374099378436" ignored="false" />
     <file path="/Run.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1374099406642" ignored="false" />
@@ -183,10 +236,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Card.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Card.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/ahsgaming/superrummy/cards/Card.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="16" selection-start="1310" selection-end="1310" vertical-scroll-proportion="0.6856618">
+            <state line="30" column="40" selection-start="733" selection-end="733" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -210,13 +263,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CardCollection.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="CardCollection.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/ahsgaming/superrummy/cards/CardCollection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="54" selection-start="1321" selection-end="1321" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="20" column="30" selection-start="461" selection-end="461" vertical-scroll-proportion="0.46691176">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -253,8 +304,8 @@
         <option value="$PROJECT_DIR$/src/com/ahsgaming/superrummy/cards/Run.java" />
         <option value="$PROJECT_DIR$/src/com/ahsgaming/superrummy/GameController.java" />
         <option value="$PROJECT_DIR$/src/com/ahsgaming/superrummy/screens/LevelScreen.java" />
-        <option value="$PROJECT_DIR$/src/com/ahsgaming/superrummy/cards/CardCollection.java" />
         <option value="$PROJECT_DIR$/src/com/ahsgaming/superrummy/cards/Card.java" />
+        <option value="$PROJECT_DIR$/src/com/ahsgaming/superrummy/cards/CardCollection.java" />
       </list>
     </option>
   </component>
@@ -309,22 +360,17 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="valley-of-bones" />
+              <option name="myItemId" value="super-rummy" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="valley-of-bones" />
+              <option name="myItemId" value="super-rummy" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -334,7 +380,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="valley-of-bones" />
+              <option name="myItemId" value="super-rummy" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -348,7 +394,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="valley-of-bones" />
+              <option name="myItemId" value="super-rummy" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -361,50 +407,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="superrummy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="valley-of-bones" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="super-rummy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="superrummy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="json" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="valley-of-bones" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="super-rummy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="superrummy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cards" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -413,21 +415,22 @@
       <pane id="Scope">
         <subPane subId="Tests" />
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GenerateAntBuildDialog.generateIdeaHomeProperty" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
     <property name="OverrideImplement.combined" value="true" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="GenerateAntBuildDialog.generateSingleFile" value="true" />
-    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="GenerateAntBuildDialog.generateSingleFile" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/valley-of-bones-client.xml" />
-    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="valley-of-bones-client" />
+    <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="false" />
     <property name="GoToClass.includeJavaFiles" value="false" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="valley-of-bones-client" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
@@ -440,8 +443,8 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="GenerateAntBuildDialog.backupFiles" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -496,19 +499,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -534,6 +524,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -677,7 +680,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="40" width="1922" height="1041" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959402" sideWeight="0.67741936" order="3" side_tool="false" content_ui="tabs" />
@@ -693,7 +696,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959402" sideWeight="0.67741936" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2414347" sideWeight="0.69930875" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30069125" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30069125" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32410613" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -798,16 +801,12 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/ahsgaming/superrummy/cards/Values.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="50" selection-start="255" selection-end="255" vertical-scroll-proportion="0.3653846">
-          <folding />
-        </state>
+        <state line="11" column="50" selection-start="255" selection-end="255" vertical-scroll-proportion="0.3653846" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ahsgaming/superrummy/cards/Suits.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="138" selection-end="138" vertical-scroll-proportion="0.26573426">
-          <folding />
-        </state>
+        <state line="8" column="0" selection-start="138" selection-end="138" vertical-scroll-proportion="0.26573426" />
       </provider>
     </entry>
     <entry file="jar:///usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar!/java/lang/Enum.class">
@@ -817,16 +816,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ahsgaming/superrummy/TextureService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="8" selection-start="1368" selection-end="1368" vertical-scroll-proportion="0.701049">
-          <folding />
-        </state>
+        <state line="41" column="8" selection-start="1368" selection-end="1368" vertical-scroll-proportion="0.701049" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ahsgaming/superrummy/json/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="13" selection-start="606" selection-end="606" vertical-scroll-proportion="-1.993007">
-          <folding />
-        </state>
+        <state line="28" column="13" selection-start="606" selection-end="606" vertical-scroll-proportion="-1.993007" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ahsgaming/superrummy/RummyGame.java">
@@ -838,9 +833,7 @@
     </entry>
     <entry file="jar://$PROJECT_DIR$/libs/gdx-sources.jar!/com/badlogic/gdx/utils/Array.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="212" column="13" selection-start="7439" selection-end="7439" vertical-scroll-proportion="0.6062425">
-          <folding />
-        </state>
+        <state line="212" column="13" selection-start="7439" selection-end="7439" vertical-scroll-proportion="0.6062425" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ahsgaming/superrummy/Player.java">
@@ -873,9 +866,7 @@
     </entry>
     <entry file="jar://$PROJECT_DIR$/libs/gdx-sources.jar!/com/badlogic/gdx/scenes/scene2d/Group.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="211" column="0" selection-start="8105" selection-end="8105" vertical-scroll-proportion="0.33207548">
-          <folding />
-        </state>
+        <state line="211" column="0" selection-start="8105" selection-end="8105" vertical-scroll-proportion="0.33207548" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ahsgaming/superrummy/GameController.java">
@@ -892,18 +883,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ahsgaming/superrummy/cards/CardCollection.java">
+    <entry file="file://$PROJECT_DIR$/src/com/ahsgaming/superrummy/cards/Card.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="54" selection-start="1321" selection-end="1321" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="30" column="40" selection-start="733" selection-end="733" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ahsgaming/superrummy/cards/Card.java">
+    <entry file="file://$PROJECT_DIR$/src/com/ahsgaming/superrummy/cards/CardCollection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="16" selection-start="1310" selection-end="1310" vertical-scroll-proportion="0.6856618">
+        <state line="20" column="30" selection-start="461" selection-end="461" vertical-scroll-proportion="0.46691176">
           <folding />
         </state>
       </provider>
