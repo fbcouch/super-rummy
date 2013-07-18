@@ -80,6 +80,8 @@ public class LevelScreen extends AbstractScreen {
         }
         currentPlayer.getHand().setHidden(false);
         currentPlayer.getHand().setCompressed(false);
+
+        grpLevel.addActor(gameController.getDeck());
 	}
 	
 	@Override
@@ -87,7 +89,6 @@ public class LevelScreen extends AbstractScreen {
 		super.resize(width, height);
 		
 		stage.addActor(grpLevel);
-
 	}
 
 	@Override
@@ -102,6 +103,10 @@ public class LevelScreen extends AbstractScreen {
                     i == 0 ? 0 : stage.getHeight() - p.getHand().getHeight()
             );
         }
+        gameController.getDeck().setPosition(
+                (stage.getWidth() - gameController.getDeck().getWidth()) * 0.5f,
+                (stage.getHeight() - gameController.getDeck().getHeight()) * 0.5f
+        );
 	}
 	
 	public void addFloatingLabel(String text, float x, float y) {

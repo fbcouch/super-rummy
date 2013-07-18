@@ -32,21 +32,24 @@ public class CardCollection extends Group {
         for (Card c: cards) if (c.dirty) dirty = true;
         super.act(delta);
 
-        if (dirty) {
-            if (cards.size == 0) {
-                setSize (0, 0);
-                return;
-            }
+        if (dirty) arrange();
+    }
 
-            int x = 0;
-            for (Card c: cards) {
-                c.setFaceDown(hidden);
-                c.setPosition(x, (c.isSelected() ? c.getHeight() * 0.25f : 0));
-                x += c.getWidth() * (compressed ? 0.25f : 0.75f);
-            }
-
-            setSize(x + cards.get(0).getWidth() * (compressed ? 0.75f : 0.25f), cards.get(0).getHeight());
+    public void arrange() {
+        if (cards.size == 0) {
+            setSize (0, 0);
+            return;
         }
+
+        int x = 0;
+        for (Card c: cards) {
+            c.setFaceDown(hidden);
+            c.setPosition(x, (c.isSelected() ? c.getHeight() * 0.25f : 0));
+            x += c.getWidth() * (compressed ? 0.25f : 0.75f);
+        }
+
+        setSize(x + cards.get(0).getWidth() * (compressed ? 0.75f : 0.25f), cards.get(0).getHeight());
+
         dirty = false;
     }
 

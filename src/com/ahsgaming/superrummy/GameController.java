@@ -56,7 +56,8 @@ public class GameController {
 	 */
 	
 	public GameController(Array<Player> players) {
-        deck = new CardCollection(null);
+        deck = new CardStack(null);
+        deck.setHidden(true);
 
         this.players = players;
 	}
