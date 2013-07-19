@@ -3,10 +3,12 @@ package com.ahsgaming.superrummy.cards;
 import com.ahsgaming.superrummy.Player;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.Group;
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
+import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Array;
 
 /**
- * valley-of-bones
+ * super-rummy
  * (c) 2013 Jami Couch
  * Created on 7/17/13 by jami
  * ahsgaming.com
@@ -22,17 +24,31 @@ public class CardCollection extends Group {
     boolean compressed = false;
     boolean hidden = false;
 
+    boolean controllable = false;
+
+    public CardCollection() {
+        this(null, false);
+    }
+
     public CardCollection(Player owner) {
+        this(owner, false);
+    }
+
+    public CardCollection(Player owner, boolean controllable) {
         super();
+
         this.owner = owner;
         cards = new Array<Card>();
+
+        this.controllable = controllable;
+        if (controllable) { /* add event listener for dragging cards around? */ }
     }
 
     @Override
     public void draw(SpriteBatch batch, float parentAlpha) {
+        for (Card c: cards) if (c.dirty) dirty = true;
         super.draw(batch, parentAlpha);
 
-        for (Card c: cards) if (c.dirty) dirty = true;
         if (dirty) arrange();
     }
 
@@ -58,14 +74,16 @@ public class CardCollection extends Group {
         cards.add(card);
         this.addActor(card);
         this.dirty = true;
+
+        card.removeListeners();
+
+        if (controllable) {
+            card.addSelectionListener();
+        }
     }
 
     public void addAll(Array<Card> cards) {
-        this.cards.addAll(cards);
-        for (Card c: cards) {
-            this.addActor(c);
-        }
-        this.dirty = true;
+        for (Card c: cards) this.addCard(c);
     }
 
     public void addAll(CardCollection cards) {

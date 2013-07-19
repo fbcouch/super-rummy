@@ -1,6 +1,8 @@
 package com.ahsgaming.superrummy.cards;
 
 import com.ahsgaming.superrummy.RummyGame;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.scenes.scene2d.EventListener;
 import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
@@ -35,21 +37,11 @@ public class Card extends Group {
         this.backImage = new Image(game.textureService.createSprite("back"));
         this.addActor(this.frontImage);
         this.setSize(this.frontImage.getWidth(), this.frontImage.getHeight());
-
-        this.addListener(new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                super.clicked(event, x, y);
-
-                toggleSelected();
-
-            }
-        });
     }
 
     @Override
-    public void act(float delta) {
-        super.act(delta);
+    public void draw(SpriteBatch batch, float parentAlpha) {
+        super.draw(batch, parentAlpha);
         if (dirty) {
             if (faceDown) {
                 frontImage.remove();
@@ -107,5 +99,23 @@ public class Card extends Group {
     public void setFaceDown(boolean faceDown) {
         dirty = true;
         this.faceDown = faceDown;
+    }
+
+    public void removeListeners() {
+        for (EventListener el: getListeners()) {
+            removeListener(el);
+        }
+    }
+
+    public void addSelectionListener() {
+        this.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                super.clicked(event, x, y);
+
+                toggleSelected();
+
+            }
+        });
     }
 }

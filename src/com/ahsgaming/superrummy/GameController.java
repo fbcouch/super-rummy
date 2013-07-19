@@ -54,6 +54,8 @@ public class GameController {
 
     Array<Player> players;
 
+    int currentPlayer;
+
 	/**
 	 * Constructors
 	 */
@@ -90,6 +92,8 @@ public class GameController {
 
     public void startGame() {
         startRound(0);
+
+        currentPlayer = (int) Math.random() * players.size;
     }
 
     public void startRound(int round) {
@@ -108,8 +112,6 @@ public class GameController {
             }
         }
 
-        discards.addCard(deck.pop());
-        discards.addCard(deck.pop());
         discards.addCard(deck.pop());
     }
 
@@ -146,5 +148,21 @@ public class GameController {
 
     public Array<Player> getPlayers() {
         return players;
+    }
+
+    /*
+     * Player actions
+     */
+
+    public void draw() {
+
+    }
+
+    public void buy() {
+
+    }
+
+    public void discard() {
+
     }
 }

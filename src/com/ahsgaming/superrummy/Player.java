@@ -18,11 +18,11 @@ public class Player {
 
     CardCollection hand;
 
-    public Player(String id, String name) {
+    public Player(String id, String name, boolean controllable) {
         this.id = id;
         this.name = name;
 
-        hand = new CardCollection(this);
+        hand = new CardCollection(this, controllable);
     }
 
     public CardCollection getHand() {

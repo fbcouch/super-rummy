@@ -31,11 +31,11 @@ public class RummyGame extends Game {
         textureService = new TextureService("assets.atlas");
 
         Array<Player> players = new Array<Player>();
-        currentPlayer = new Player(Utils.getRandomId(), "Jami");
+        currentPlayer = new Player(Utils.getRandomId(), "Jami", true);
         players.add(currentPlayer);
-        players.add(new Player(Utils.getRandomId(), "Player"));
-        players.add(new Player(Utils.getRandomId(), "Player"));
-        players.add(new Player(Utils.getRandomId(), "Player"));
+        players.add(new Player(Utils.getRandomId(), "Player", false));
+        players.add(new Player(Utils.getRandomId(), "Player", false));
+        players.add(new Player(Utils.getRandomId(), "Player", false));
 
         gameController = new GameController(players);
         gameController.startRound(0);
