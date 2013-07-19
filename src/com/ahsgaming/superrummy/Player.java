@@ -28,4 +28,12 @@ public class Player {
     public CardCollection getHand() {
         return hand;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

@@ -23,6 +23,7 @@
 package com.ahsgaming.superrummy;
 
 import com.ahsgaming.superrummy.cards.*;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
@@ -56,6 +57,8 @@ public class GameController {
 
     int currentPlayer;
 
+    boolean hasDrawn = false;
+
 	/**
 	 * Constructors
 	 */
@@ -70,20 +73,6 @@ public class GameController {
         discards.setCompressed(true);
 
         this.players = players;
-
-        discards.addListener(new ClickListener() {
-            @Override
-            public void enter(InputEvent event, float x, float y, int pointer, Actor fromActor) {
-                super.enter(event, x, y, pointer, fromActor);
-                discards.setCompressed(false);
-            }
-
-            @Override
-            public void exit(InputEvent event, float x, float y, int pointer, Actor toActor) {
-                super.exit(event, x, y, pointer, toActor);
-                discards.setCompressed(true);
-            }
-        });
 	}
 
 	/**
@@ -93,7 +82,7 @@ public class GameController {
     public void startGame() {
         startRound(0);
 
-        currentPlayer = (int) Math.random() * players.size;
+        currentPlayer = 0;//(int) Math.random() * players.size;
     }
 
     public void startRound(int round) {
@@ -112,6 +101,8 @@ public class GameController {
             }
         }
 
+        discards.addCard(deck.pop());
+        discards.addCard(deck.pop());
         discards.addCard(deck.pop());
     }
 
@@ -150,19 +141,54 @@ public class GameController {
         return players;
     }
 
+    public boolean isCurrentPlayer(Player p) {
+        return (p == players.get(currentPlayer));
+    }
+
     /*
      * Player actions
      */
 
-    public void draw() {
-
+    public void startTurn() {
+        hasDrawn = false;
     }
 
-    public void buy() {
+    /**
+     * current player attempts to swap out a joker
+     */
+    public void swapJoker() {
+        endTurn();
+    }
 
+    public void draw(Player p, boolean isBuying) {
+        if ((!isCurrentPlayer(p) || hasDrawn) && !isBuying)
+            return;
+
+        Card c = deck.pop();
+        players.get(currentPlayer).getHand().addCard(c);
+        if (RummyGame.DEBUG) Gdx.app.log(LOG, String.format("Player %s drew %s", players.get(currentPlayer).getName(), c.getCardString()));
+        hasDrawn = true;
+    }
+
+    public void buy(Player p) {
+        if (discards.getCards().size == 0) return;
+        if ((isCurrentPlayer(p) && hasDrawn) || !isCurrentPlayer(p))
+            draw(p, true);
+        Card c = discards.pop();
+        p.getHand().addCard(c);
+        if (RummyGame.DEBUG) Gdx.app.log(LOG, String.format("Player %s picked up %s", players.get(currentPlayer).getName(), c.getCardString()));
+        if (isCurrentPlayer(p)) hasDrawn = true;
     }
 
     public void discard() {
-
+        endTurn();
     }
+
+    public void endTurn() {
+        currentPlayer += 1;
+        currentPlayer %= players.size;
+        startTurn();
+    }
+
+
 }

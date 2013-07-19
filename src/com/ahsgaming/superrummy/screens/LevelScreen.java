@@ -28,11 +28,14 @@ import com.ahsgaming.superrummy.RummyGame;
 import com.ahsgaming.superrummy.cards.Card;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Group;
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Label.LabelStyle;
+import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 
 /**
  * @author jami
@@ -88,6 +91,36 @@ public class LevelScreen extends AbstractScreen {
         grpCardArea.addActor(gameController.getDiscards());
 
         grpLevel.addActor(grpCardArea);
+
+        gameController.getDiscards().addListener(new ClickListener() {
+            @Override
+            public void enter(InputEvent event, float x, float y, int pointer, Actor fromActor) {
+                super.enter(event, x, y, pointer, fromActor);
+                gameController.getDiscards().setCompressed(false);
+            }
+
+            @Override
+            public void exit(InputEvent event, float x, float y, int pointer, Actor toActor) {
+                super.exit(event, x, y, pointer, toActor);
+                gameController.getDiscards().setCompressed(true);
+            }
+
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                super.clicked(event, x, y);
+
+                if (gameController.isCurrentPlayer(currentPlayer)) gameController.buy(currentPlayer);
+            }
+        });
+
+        gameController.getDeck().addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                super.clicked(event, x, y);
+
+                if (gameController.isCurrentPlayer(currentPlayer)) gameController.draw(currentPlayer, false);
+            }
+        });
 	}
 	
 	@Override

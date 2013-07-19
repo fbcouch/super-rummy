@@ -38,7 +38,7 @@ public class RummyGame extends Game {
         players.add(new Player(Utils.getRandomId(), "Player", false));
 
         gameController = new GameController(players);
-        gameController.startRound(0);
+        gameController.startGame();
         if (DEBUG) setScreen(new LevelScreen(this, gameController, currentPlayer));
     }
 
