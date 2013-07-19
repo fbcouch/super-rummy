@@ -16,8 +16,9 @@ public abstract class Meld extends CardCollection {
     }
 
     public abstract boolean canAdd(Card card);
-    public abstract boolean canSwap(Card card);
-    public abstract Card swap(Card card);
+    public abstract boolean canSwap(Card card, Card joker);
+    public abstract Card swap(Card card, Card joker);
     public abstract Values getValueOf(Card card);
     public abstract Suits getSuitOf(Card card);
+    public abstract boolean isValid();
 }

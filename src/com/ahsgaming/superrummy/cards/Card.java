@@ -78,6 +78,14 @@ public class Card extends Group {
         return returnVal;
     }
 
+    public Values getValue() {
+        return value;
+    }
+
+    public Suits getSuit() {
+        return suit;
+    }
+
     public boolean isSelected() {
         return selected;
     }

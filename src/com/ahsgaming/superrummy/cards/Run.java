@@ -21,12 +21,12 @@ public class Run extends Meld {
     }
 
     @Override
-    public boolean canSwap(Card card) {
+    public boolean canSwap(Card card, Card joker) {
         return false;
     }
 
     @Override
-    public Card swap(Card card) {
+    public Card swap(Card card, Card joker) {
         return null;
     }
 
@@ -38,5 +38,10 @@ public class Run extends Meld {
     @Override
     public Suits getSuitOf(Card card) {
         return null;
+    }
+
+    @Override
+    public boolean isValid() {
+        return false;
     }
 }
