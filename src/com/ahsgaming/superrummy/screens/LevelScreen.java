@@ -32,9 +32,9 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.actions.Actions;
-import com.badlogic.gdx.scenes.scene2d.ui.Image;
-import com.badlogic.gdx.scenes.scene2d.ui.Label;
+import com.badlogic.gdx.scenes.scene2d.ui.*;
 import com.badlogic.gdx.scenes.scene2d.ui.Label.LabelStyle;
+import com.badlogic.gdx.scenes.scene2d.utils.Align;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 
 /**
@@ -51,6 +51,8 @@ public class LevelScreen extends AbstractScreen {
 	GameController gameController = null;
 
     Player currentPlayer;
+
+    Table controlPanel;
 	
 	/**
 	 * @param game
@@ -109,7 +111,7 @@ public class LevelScreen extends AbstractScreen {
             public void clicked(InputEvent event, float x, float y) {
                 super.clicked(event, x, y);
 
-                if (gameController.isCurrentPlayer(currentPlayer)) gameController.buy(currentPlayer);
+                gameController.buy(currentPlayer);
             }
         });
 
@@ -121,13 +123,61 @@ public class LevelScreen extends AbstractScreen {
                 if (gameController.isCurrentPlayer(currentPlayer)) gameController.draw(currentPlayer, false);
             }
         });
-	}
+
+        controlPanel = new Table(getSkin());
+        stage.addActor(controlPanel);
+
+        TextButton btn = new TextButton("Draw", getSkin());
+        controlPanel.add(btn).size(100, 50);
+        controlPanel.align(Align.left + Align.bottom);
+
+        btn.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                super.clicked(event, x, y);
+
+                if (gameController.isCurrentPlayer(currentPlayer)) gameController.draw(currentPlayer, false);
+            }
+        });
+
+        controlPanel.row();
+
+        btn = new TextButton("Buy", getSkin());
+        controlPanel.add(btn).size(100, 50);
+
+        btn.addListener(new ClickListener(){
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                super.clicked(event, x, y);
+
+                gameController.buy(currentPlayer);
+            }
+        });
+
+        controlPanel.row();
+
+        btn = new TextButton("Discard", getSkin());
+        controlPanel.add(btn).size(100, 50);
+
+        btn.addListener(new ClickListener(){
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                super.clicked(event, x, y);
+
+                gameController.discard(currentPlayer);
+            }
+        });
+
+        controlPanel.row();
+    }
 	
 	@Override
 	public void resize(int width, int height) {
 		super.resize(width, height);
 		
 		stage.addActor(grpLevel);
+
+        stage.addActor(controlPanel);
 
         grpCardArea.setPosition(stage.getWidth() * 0.5f, stage.getHeight() * 0.5f);
 	}

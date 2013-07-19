@@ -165,8 +165,8 @@ public class GameController {
             return;
 
         Card c = deck.pop();
-        players.get(currentPlayer).getHand().addCard(c);
-        if (RummyGame.DEBUG) Gdx.app.log(LOG, String.format("Player %s drew %s", players.get(currentPlayer).getName(), c.getCardString()));
+        p.getHand().addCard(c);
+        if (RummyGame.DEBUG) Gdx.app.log(LOG, String.format("Player %s drew %s", p.getName(), c.getCardString()));
         hasDrawn = true;
     }
 
@@ -176,12 +176,29 @@ public class GameController {
             draw(p, true);
         Card c = discards.pop();
         p.getHand().addCard(c);
-        if (RummyGame.DEBUG) Gdx.app.log(LOG, String.format("Player %s picked up %s", players.get(currentPlayer).getName(), c.getCardString()));
+        if (RummyGame.DEBUG) Gdx.app.log(LOG, String.format("Player %s picked up %s", p.getName(), c.getCardString()));
         if (isCurrentPlayer(p)) hasDrawn = true;
     }
 
-    public void discard() {
-        endTurn();
+    public void discard(Player p) {
+        if (!isCurrentPlayer(p) || !hasDrawn) return;
+
+        Card d = null;
+
+        for (Card c: p.getHand().getCards()) {
+            if (c.isSelected()) {
+                d = c;
+                break;
+            }
+        }
+
+        if (d != null) {
+            p.getHand().removeCard(d);
+            discards.addCard(d);
+            d.clearStates();
+            Gdx.app.log(LOG, String.format("Player %s discarded %s", p.getName(), d.getCardString()));
+            endTurn();
+        }
     }
 
     public void endTurn() {

@@ -107,6 +107,12 @@ public class Card extends Group {
         }
     }
 
+    public void clearStates() {
+        faceDown = false;
+        selected = false;
+        dirty = true;
+    }
+
     public void addSelectionListener() {
         this.addListener(new ClickListener() {
             @Override
