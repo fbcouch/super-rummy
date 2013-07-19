@@ -23,6 +23,9 @@
 package com.ahsgaming.superrummy;
 
 import com.ahsgaming.superrummy.cards.*;
+import com.badlogic.gdx.scenes.scene2d.Actor;
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
+import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Array;
 
 /**
@@ -58,13 +61,36 @@ public class GameController {
 	public GameController(Array<Player> players) {
         deck = new CardStack(null);
         deck.setHidden(true);
+        deck.setCompressed(true);
+
+        discards = new CardStack(null);
+        discards.setHidden(false);
+        discards.setCompressed(true);
 
         this.players = players;
+
+        discards.addListener(new ClickListener() {
+            @Override
+            public void enter(InputEvent event, float x, float y, int pointer, Actor fromActor) {
+                super.enter(event, x, y, pointer, fromActor);
+                discards.setCompressed(false);
+            }
+
+            @Override
+            public void exit(InputEvent event, float x, float y, int pointer, Actor toActor) {
+                super.exit(event, x, y, pointer, toActor);
+                discards.setCompressed(true);
+            }
+        });
 	}
 
 	/**
 	 * Methods
 	 */
+
+    public void startGame() {
+        startRound(0);
+    }
 
     public void startRound(int round) {
         currentRound = round;
@@ -81,6 +107,10 @@ public class GameController {
                 p.getHand().addCard(deck.pop());
             }
         }
+
+        discards.addCard(deck.pop());
+        discards.addCard(deck.pop());
+        discards.addCard(deck.pop());
     }
 
     public Array<Card> shuffle() {
@@ -108,6 +138,10 @@ public class GameController {
 
     public CardCollection getDeck() {
         return deck;
+    }
+
+    public CardCollection getDiscards() {
+        return discards;
     }
 
     public Array<Player> getPlayers() {

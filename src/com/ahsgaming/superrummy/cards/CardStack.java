@@ -28,7 +28,7 @@ public class CardStack extends CardCollection {
             Card c = cards.get(cards.size - 1 - i);
             c.setFaceDown(isHidden());
             cardArray.add(c);
-            c.setPosition(((cards.size < 5 ? cards.size : 5) - i - 1) * c.getWidth() * 0.05f, 0);
+            c.setPosition(((cards.size < 5 ? cards.size : 5) - i - 1) * c.getWidth() * (compressed ? 0.05f : 0.2f), 0);
         }
 
         while(cardArray.size > 0) addActor(cardArray.pop());

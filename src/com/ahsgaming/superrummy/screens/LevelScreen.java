@@ -43,7 +43,7 @@ public class LevelScreen extends AbstractScreen {
 
     static LevelScreen instance;
 
-	Group grpLevel;
+	Group grpLevel, grpCardArea;
 	
 	GameController gameController = null;
 
@@ -72,6 +72,7 @@ public class LevelScreen extends AbstractScreen {
 		super.show();
 		Gdx.app.log(RummyGame.LOG, "LevelScreen#show");
         grpLevel = new Group();
+        grpCardArea = new Group();
 
         for (Player p: gameController.getPlayers()) {
             grpLevel.addActor(p.getHand());
@@ -82,6 +83,11 @@ public class LevelScreen extends AbstractScreen {
         currentPlayer.getHand().setCompressed(false);
 
         grpLevel.addActor(gameController.getDeck());
+
+        grpCardArea.addActor(gameController.getDeck());
+        grpCardArea.addActor(gameController.getDiscards());
+
+        grpLevel.addActor(grpCardArea);
 	}
 	
 	@Override
@@ -89,6 +95,8 @@ public class LevelScreen extends AbstractScreen {
 		super.resize(width, height);
 		
 		stage.addActor(grpLevel);
+
+        grpCardArea.setPosition(stage.getWidth() * 0.5f, stage.getHeight() * 0.5f);
 	}
 
 	@Override
@@ -103,10 +111,9 @@ public class LevelScreen extends AbstractScreen {
                     i == 0 ? 0 : stage.getHeight() - p.getHand().getHeight()
             );
         }
-        gameController.getDeck().setPosition(
-                (stage.getWidth() - gameController.getDeck().getWidth()) * 0.5f,
-                (stage.getHeight() - gameController.getDeck().getHeight()) * 0.5f
-        );
+
+        gameController.getDiscards().setPosition(- gameController.getDiscards().getWidth() - 10, - gameController.getDiscards().getHeight() * 0.5f);
+        gameController.getDeck().setPosition(10, - gameController.getDeck().getHeight() * 0.5f);
 	}
 	
 	public void addFloatingLabel(String text, float x, float y) {

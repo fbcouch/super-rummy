@@ -7,24 +7,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="158f7e3e-4279-4ad7-b3f4-7deb523413fc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/ahsgaming/superrummy/cards/CardStack.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ahsgaming/superrummy/cards/CardCollection.java" afterPath="$PROJECT_DIR$/src/com/ahsgaming/superrummy/cards/CardCollection.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ahsgaming/superrummy/cards/CardStack.java" afterPath="$PROJECT_DIR$/src/com/ahsgaming/superrummy/cards/CardStack.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ahsgaming/superrummy/GameController.java" afterPath="$PROJECT_DIR$/src/com/ahsgaming/superrummy/GameController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ahsgaming/superrummy/screens/LevelScreen.java" afterPath="$PROJECT_DIR$/src/com/ahsgaming/superrummy/screens/LevelScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="valley-of-bones.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1374176739135" ignored="false" />
+    <file path="/Dummy.txt" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1374250805711" ignored="false" />
     <file path="/fragment.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1374026042993" ignored="false" />
     <file path="/KryoCommon.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1369368067837" ignored="false" />
     <file path="/GameClient.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1367105013238" ignored="false" />
     <file path="/VOBGame.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1374026865504" ignored="false" />
     <file path="/GameServer.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1367695971819" ignored="false" />
     <file path="/NetController.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1367104835122" ignored="false" />
-    <file path="/GameController.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1374184434117" ignored="false" />
+    <file path="/GameController.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1374250803964" ignored="false" />
     <file path="/EndTurn.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1367090717362" ignored="false" />
-    <file path="/LevelScreen.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1374184036077" ignored="false" />
+    <file path="/LevelScreen.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1374251049258" ignored="false" />
     <file path="/MainMenuScreen.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1367096167407" ignored="false" />
     <file path="/AbstractScreen.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1374024074647" ignored="false" />
     <file path="/GameSetupScreen.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1368232618295" ignored="false" />
@@ -70,7 +69,7 @@
     <file path="/Meld.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1374099310073" ignored="false" />
     <file path="/Book.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1374099378436" ignored="false" />
     <file path="/Run.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1374099406642" ignored="false" />
-    <file path="/CardStack.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1374184654199" ignored="false" />
+    <file path="/CardStack.java" changelist="158f7e3e-4279-4ad7-b3f4-7deb523413fc" time="1374250668349" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,38 +126,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/com/ahsgaming/superrummy/cards/CardStack.java" line="35" class="com.ahsgaming.superrummy.cards.CardStack" package="com.ahsgaming.superrummy.cards">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/ahsgaming/superrummy/cards/CardStack.java" line="37" class="com.ahsgaming.superrummy.cards.CardStack" package="com.ahsgaming.superrummy.cards">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -180,25 +148,25 @@
       <file leaf-file-name="GameController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/ahsgaming/superrummy/GameController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="27" selection-start="1596" selection-end="1596" vertical-scroll-proportion="0.0">
+            <state line="112" column="22" selection-start="3045" selection-end="3045" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LevelScreen.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="LevelScreen.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/ahsgaming/superrummy/screens/LevelScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="108" column="10" selection-start="3314" selection-end="3314" vertical-scroll-proportion="0.6267857">
+            <state line="115" column="34" selection-start="3570" selection-end="3570" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CardCollection.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="CardCollection.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/ahsgaming/superrummy/cards/CardCollection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="29" selection-start="787" selection-end="787" vertical-scroll-proportion="0.0">
+            <state line="29" column="4" selection-start="670" selection-end="670" vertical-scroll-proportion="0.2705061">
               <folding />
             </state>
           </provider>
@@ -207,7 +175,7 @@
       <file leaf-file-name="CardStack.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/ahsgaming/superrummy/cards/CardStack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="0" selection-start="1124" selection-end="1124" vertical-scroll-proportion="0.0">
+            <state line="30" column="114" selection-start="963" selection-end="963" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#647#653#0" expanded="true" />
@@ -246,10 +214,10 @@
         <option value="$PROJECT_DIR$/src/com/ahsgaming/superrummy/cards/Run.java" />
         <option value="$PROJECT_DIR$/src/com/ahsgaming/superrummy/cards/Card.java" />
         <option value="$PROJECT_DIR$/src/com/ahsgaming/superrummy/RummyGame.java" />
-        <option value="$PROJECT_DIR$/src/com/ahsgaming/superrummy/cards/CardCollection.java" />
-        <option value="$PROJECT_DIR$/src/com/ahsgaming/superrummy/GameController.java" />
         <option value="$PROJECT_DIR$/src/com/ahsgaming/superrummy/cards/CardStack.java" />
+        <option value="$PROJECT_DIR$/src/com/ahsgaming/superrummy/GameController.java" />
         <option value="$PROJECT_DIR$/src/com/ahsgaming/superrummy/screens/LevelScreen.java" />
+        <option value="$PROJECT_DIR$/src/com/ahsgaming/superrummy/cards/CardCollection.java" />
       </list>
     </option>
   </component>
@@ -830,13 +798,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ahsgaming/superrummy/cards/CardCollection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="29" selection-start="787" selection-end="787" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ahsgaming/superrummy/RummyGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="66" selection-start="1135" selection-end="1135" vertical-scroll-proportion="0.0">
@@ -846,14 +807,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ahsgaming/superrummy/GameController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="27" selection-start="1596" selection-end="1596" vertical-scroll-proportion="0.0">
+        <state line="112" column="22" selection-start="3045" selection-end="3045" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ahsgaming/superrummy/screens/LevelScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="115" column="34" selection-start="3570" selection-end="3570" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ahsgaming/superrummy/cards/CardStack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="1124" selection-end="1124" vertical-scroll-proportion="0.0">
+        <state line="30" column="114" selection-start="963" selection-end="963" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#647#653#0" expanded="true" />
@@ -861,9 +829,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ahsgaming/superrummy/screens/LevelScreen.java">
+    <entry file="file://$PROJECT_DIR$/src/com/ahsgaming/superrummy/cards/CardCollection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="10" selection-start="3314" selection-end="3314" vertical-scroll-proportion="0.6267857">
+        <state line="29" column="4" selection-start="670" selection-end="670" vertical-scroll-proportion="0.2705061">
           <folding />
         </state>
       </provider>

@@ -1,6 +1,7 @@
 package com.ahsgaming.superrummy.cards;
 
 import com.ahsgaming.superrummy.Player;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.utils.Array;
 
@@ -28,10 +29,10 @@ public class CardCollection extends Group {
     }
 
     @Override
-    public void act(float delta) {
-        for (Card c: cards) if (c.dirty) dirty = true;
-        super.act(delta);
+    public void draw(SpriteBatch batch, float parentAlpha) {
+        super.draw(batch, parentAlpha);
 
+        for (Card c: cards) if (c.dirty) dirty = true;
         if (dirty) arrange();
     }
 
