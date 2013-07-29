@@ -22,7 +22,7 @@ public class Book extends Meld {
 
     @Override
     public boolean canAdd(Card card) {
-        return (value == Values.NONE || value == card.getValue());
+        return (value == Values.NONE || value == card.getValue() || card.getValue() == Values.JOKER);
     }
 
     @Override
@@ -36,7 +36,7 @@ public class Book extends Meld {
 
     @Override
     public boolean canSwap(Card card, Card joker) {
-        return (card.getValue() == value);
+        return (card.getValue() == value && joker.getValue() == Values.JOKER && card.getValue() != Values.JOKER);
     }
 
     @Override
@@ -51,12 +51,12 @@ public class Book extends Meld {
     }
 
     @Override
-    public Values getValueOf(Card card) {
+    public Values getValue() {
         return value;
     }
 
     @Override
-    public Suits getSuitOf(Card card) {
+    public Suits getSuit() {
         return Suits.NONE;
     }
 

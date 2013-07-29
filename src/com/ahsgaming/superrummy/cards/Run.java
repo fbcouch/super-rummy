@@ -31,12 +31,12 @@ public class Run extends Meld {
     }
 
     @Override
-    public Values getValueOf(Card card) {
+    public Values getValue() {
         return null;
     }
 
     @Override
-    public Suits getSuitOf(Card card) {
+    public Suits getSuit() {
         return null;
     }
 
