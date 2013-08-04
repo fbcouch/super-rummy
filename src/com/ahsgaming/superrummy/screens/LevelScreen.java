@@ -140,6 +140,18 @@ public class LevelScreen extends AbstractScreen {
             }
         });
 
+        btn = new TextButton("Meld", getSkin());
+        controlPanel.add(btn).size(100, 50);
+
+        btn.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                super.clicked(event, x, y);
+
+                if (gameController.isCurrentPlayer(currentPlayer)) gameController.meld(currentPlayer);
+            }
+        });
+
         controlPanel.row();
 
         btn = new TextButton("Buy", getSkin());

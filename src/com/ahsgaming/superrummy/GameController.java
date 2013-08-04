@@ -73,6 +73,8 @@ public class GameController {
         discards.setCompressed(true);
 
         this.players = players;
+
+        melds = new Array<Meld>(players.size * 3);
 	}
 
 	/**
@@ -88,6 +90,7 @@ public class GameController {
     public void startRound(int round) {
         currentRound = round;
         deck.clear();
+        melds.clear();
 
         deck.addAll(shuffle());
 
@@ -199,6 +202,46 @@ public class GameController {
             Gdx.app.log(LOG, String.format("Player %s discarded %s", p.getName(), d.getCardString()));
             endTurn();
         }
+    }
+
+    public void meld(Player p) {
+        if (!isCurrentPlayer(p) || !hasDrawn) return;
+
+        Array<Card> selected = new Array<Card>(p.getHand().getCards().size);
+
+        for (Card c: p.getHand().getCards()) {
+            if (c.isSelected())
+                selected.add(new Card(c.getValue(), c.getSuit()));
+        }
+
+        Book b = new Book(Utils.getRandomId(), p);
+
+        b.addAll(selected);
+
+        if (b.isValid()) {
+            // yay we can meld a book
+            b = new Book(Utils.getRandomId(), p);
+            for (Card c: p.getHand().getCards()) {
+                if (c.isSelected())
+                    b.addCard(c);
+            }
+            doMeld(p, b);
+            return;
+        }
+
+        // TODO add runs
+
+        // TODO need to implement a 'meld mode' since we can only meld if we have all the melds demanded
+    }
+
+    private void doMeld(Player p, Meld m) {
+        for (Card c: m.getCards()) {
+            p.getHand().removeCard(c);
+        }
+
+        melds.add(m);
+
+        Gdx.app.log(LOG, String.format("Player %s melded %s", p.toString(), m.toString()));
     }
 
     public void endTurn() {

@@ -1,4 +1,4 @@
-# VALLEY OF BONES #
+# SUPER RUMMY #
 
 **An AHS Gaming Production**
 
@@ -16,16 +16,16 @@ This game requires at least Java 1.6, so you may need to update your Java instal
 Otherwise, it should just run when you double-click the icon.
 Alternatively, you may use the following command in a CLI:
 
-	java -jar ValleyOfBones.jar
+	java -jar SuperRummy.jar
 	
 To run the multiplayer server, double click the ValleyOfBonesServer.jar.
 Alternatively, you may use the following command in a CLI:
 
-    java -jar ValleyOfBonesServer.jar
+    java -jar SuperRummyServer.jar
 
 The latest nightly build can be found at 
 
-	http://ahsgaming.com/downloads/nightlies/ValleyOfBones-latest.zip
+	http://ahsgaming.com/downloads/nightlies/SuperRummy-latest.zip
 
 ## LICENSE ##
 

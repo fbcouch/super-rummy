@@ -133,4 +133,43 @@ public class Card extends Group {
             }
         });
     }
+
+    @Override
+    public String toString() {
+        String returnVal = "";
+        switch(suit) {
+            case CLUBS:
+                returnVal = "C";
+                break;
+            case SPADES:
+                returnVal = "S";
+                break;
+            case DIAMONDS:
+                returnVal = "D";
+                break;
+            case HEARTS:
+                returnVal = "H";
+                break;
+        }
+        switch(value) {
+            case JOKER:
+                returnVal = "JR";
+                break;
+            case ACE:
+                returnVal += "A";
+                break;
+            case JACK:
+                returnVal += "J";
+                break;
+            case QUEEN:
+                returnVal += "Q";
+                break;
+            case KING:
+                returnVal += "K";
+                break;
+            default:
+                returnVal += value.ordinal();
+        }
+        return returnVal;
+    }
 }

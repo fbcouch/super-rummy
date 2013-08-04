@@ -70,4 +70,9 @@ public class Book extends Meld {
 
         return true;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Book: %s", super.toString());
+    }
 }

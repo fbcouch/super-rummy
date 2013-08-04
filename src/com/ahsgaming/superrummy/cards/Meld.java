@@ -21,4 +21,13 @@ public abstract class Meld extends CardCollection {
     public abstract Values getValue();
     public abstract Suits getSuit();
     public abstract boolean isValid();
+
+    @Override
+    public String toString() {
+        String returnVal = String.format("%s:", id);
+        for (Card c: cards) {
+            returnVal = String.format("%s [%s],", returnVal, c.toString());
+        }
+        return returnVal;
+    }
 }
