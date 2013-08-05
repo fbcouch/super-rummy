@@ -231,6 +231,20 @@ public class GameController {
 
         // TODO add runs
 
+        Run r = new Run(Utils.getRandomId(), p);
+
+        r.addAll(selected);
+
+        if (r.isValid()) {
+            r = new Run(Utils.getRandomId(), p);
+            for (Card c: p.getHand().getCards()) {
+                if (c.isSelected())
+                    r.addCard(c);
+            }
+            doMeld(p, b);
+            return;
+        }
+
         // TODO need to implement a 'meld mode' since we can only meld if we have all the melds demanded
     }
 

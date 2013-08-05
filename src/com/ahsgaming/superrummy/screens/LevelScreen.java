@@ -25,7 +25,7 @@ package com.ahsgaming.superrummy.screens;
 import com.ahsgaming.superrummy.GameController;
 import com.ahsgaming.superrummy.Player;
 import com.ahsgaming.superrummy.RummyGame;
-import com.ahsgaming.superrummy.cards.Card;
+import com.ahsgaming.superrummy.cards.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.scenes.scene2d.Actor;
@@ -53,6 +53,8 @@ public class LevelScreen extends AbstractScreen {
     Player currentPlayer;
 
     Table controlPanel;
+
+    Window meldModeWindow = null;
 	
 	/**
 	 * @param game
@@ -67,6 +69,29 @@ public class LevelScreen extends AbstractScreen {
 	/**
 	 * Methods
 	 */
+
+    public void activateMeldMode() {
+        if (meldModeWindow != null) deactivateMeldMode();
+        meldModeWindow = new Window("Melds", getSkin());
+        meldModeWindow.setSize(400, 300);
+        Table meldWidgetGroup = new Table(getSkin());
+        Book b = new Book("", null);
+        b.addCard(new Card(Values.ACE, Suits.CLUBS));
+        b.addCard(new Card(Values.ACE, Suits.DIAMONDS));
+        meldWidgetGroup.add(new MeldToolbar(b, getSkin())).row();
+        meldWidgetGroup.pack();
+        ScrollPane sp = new ScrollPane(meldWidgetGroup, getSkin());
+        meldModeWindow.add(sp).size(meldModeWindow.getWidth(), meldModeWindow.getHeight() - meldModeWindow.getPadTop());
+
+        stage.addActor(meldModeWindow);
+    }
+
+    public void deactivateMeldMode() {
+        if (meldModeWindow == null) return;
+
+        meldModeWindow.remove();
+        meldModeWindow = null;
+    }
 
 	/**
 	 * Implemented methods
@@ -148,7 +173,7 @@ public class LevelScreen extends AbstractScreen {
             public void clicked(InputEvent event, float x, float y) {
                 super.clicked(event, x, y);
 
-                if (gameController.isCurrentPlayer(currentPlayer)) gameController.meld(currentPlayer);
+                activateMeldMode();
             }
         });
 
